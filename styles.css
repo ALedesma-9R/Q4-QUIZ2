@@ -1,0 +1,41 @@
+body {
+	background-color: lightyellow;
+}
+
+.container {
+	border: 5px outset;
+	background-color: bisque;
+	margin-bottom: 30px;
+}
+
+h1 {
+	margin-top: 10px;
+	background-color: darkgoldenrod;
+	text-indent: 50px;
+}
+
+details {
+	text-align: center;
+}
+
+.table-striped {
+  width: 700px;
+  font-size:1rem;
+  margin: 0 auto;
+}
+
+img {
+	margin-bottom: 7.8px;
+}
+
+.announcement {
+	padding: 20px;
+	background-color: goldenrod;
+	border: 3px yellow dashed;
+	border-radius: 25px;
+}
+
+
+.button-row {
+	text-align: center;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- BS SETUP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- JS SETUP -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<title>Q4 QUIZ2: </title>
+</head>
+ <body>
+  <div class="container mt-5">
+ 		<h1>🏆 Grade Average Checker</h1>
+
+ 		<div class="row text-center">
+ 			<details>
+ 				<summary>📝 Instructions</summary>
+ 				Input your grade for each special subject to receive the rating of current grades status.
+ 			</details>
+ 			<details>
+ 				<summary>📝 Rating Guide</summary>
+ 				<table class="table table-striped text-center mx-auto">
+ 					<tr><th>94 - 100</th>
+ 					<td>Excellent</td></tr>
+ 					<tr><th>87-93.99</th>
+ 					<td>Above Satisfactory</td></tr>
+ 					<tr><th>80-86.99</th>
+ 					<td>Satisfactory</td></tr>
+ 					<tr><th>75-79.99</th>
+ 					<td>Needs Improvement</td></tr>
+ 					<tr><th>70-74.99</th>
+ 					<td>Poor</td></tr>
+ 				</table>
+ 			</details>
+ 		</div>
+
+<hr>
+
+ 		<div class="row">
+ 			<div class="col-md-4">
+	 		<img src="1.png" width="200px">
+	 		<label for="number">Enter ICT:</label>
+	 		<p style="background-color: darkorchid;">Students learn digital skills that are becoming more useful and prominent, since its rise from the late decades of the 1900's & early 2000's. Today, it teaches technological skills as: Spreadsheets, powerpoints & presentations, parts of computers & device , coding, and image creation.</p>
+	 		<input type="number" class="form-control" id="scoreICT" placeholder="Value of your ICT score">
+	 		</div>
+
+ 			<div class="col-md-4">
+ 			<img src="2.png" width="200px">
+	 		<label for="number">Enter TLE:</label>
+	 		<p style="background-color: magenta;">Through this subject, students learn many important life skills and practical, technical knowledge, especially in terms of the home. It has 4 main components: Home economics, Industrial arts, Agri-Fishery, and in some cases ICT.</p>
+	 		<input type="number" class="form-control" id="scoreTLE" placeholder="Value of your TLE score">
+	 		</div>
+
+	 		<div class="col-md-4">
+	 		<img src="3.png" width="200px">
+	 		<label for="number">Enter Music:</label>
+	 		<p style="background-color: deepskyblue;">Teaching students to learn about music, as it became a big aspect in all human life. The cultures, traditions, and components (meaning instruments, parts of a song) that make up the sound many love to listen to as daily accompaniment to their days.</p>
+	 		<input type="number" class="form-control" id="scoreMusic" placeholder="Value of your Music score">
+	 		</div>
+	 	</div>
+
+	 	<div class="row announcement mt-3 mx-2">
+	 		<h2>📚 Grades Status:</h2><h2 id="grade"></h2>
+	 	</div>
+
+	 	<div class="row mt-3">
+  		 <div class="button-row">
+    		<button type="button" class="btn btn-primary" onclick="check()">Submit</button>
+    		<button type="button" class="btn btn-primary" onclick="window.location.reload()">Refresh</button>
+  		 </div>
+		</div>
+
+	<div class="footer mt-5 text-center"><h2><a href="https://aledesma-9r.github.io/Q3EX2/">&#169; AY 24-25 | ICT 9-R | Aisha Ashley O. Ledesma</a></h2></div>
+ </div>
+
+	<script type="text/javascript">
+		//average
+		function check() {
+ 		var subj1=document.getElementById('scoreTLE').value;
+ 		var subj2=document.getElementById('scoreICT').value;
+ 		var subj3=document.getElementById('scoreMusic').value;
+
+ 		var avg=(Number(subj1)+Number(subj2)+Number(subj3))/3; //avg is the sum of all subject grades, divided by 3 to give an almost equal amount between each subject (the "average")
+ 		avg = avg.toFixed(2);
+
+ 		if (avg >= 94) {
+ 			window.alert('Excellent');
+ 			document.getElementById('grade').innerHTML=avg+" (Excellent!)";
+ 		}
+ 		else if (avg >= 87 && avg <= 93.99) {
+ 			window.alert('Above Satisfactory');
+ 			document.getElementById('grade').innerHTML=avg+" (Above Satisfactory!)";
+ 		}
+ 		else if (avg >= 80 && avg <= 86.99) {
+ 			window.alert('Satisfactory');
+ 			document.getElementById('grade').innerHTML=avg+" (Satisfactory!)";
+ 		}
+ 		else if (avg >= 75 && avg <= 79.99) {
+ 			window.alert('Needs Improvement');
+ 			document.getElementById('grade').innerHTML=avg+" (Needs Improvement!)";
+ 		}
+ 		else {
+ 			window.alert('Poor');
+ 			document.getElementById('grade').innerHTML=avg+" (Poor!)";
+ 		}
+ 	}
+	</script>
+ </body>
+</html>
